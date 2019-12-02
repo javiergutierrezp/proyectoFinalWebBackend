@@ -36,7 +36,7 @@ const createPost = function(req, res) {
 const updatePost = function(req, res) {
   const _id = req.params.id
   const updates = Object.keys(req.body)
-  const allowedUpdates = ['question']
+  const allowedUpdates = ['question', 'answer']
   // revisa que los updates enviados sean permitidos, que no envie una key que no permitimos
   const isValidUpdate = updates.every((update) => allowedUpdates.includes(update))
 
